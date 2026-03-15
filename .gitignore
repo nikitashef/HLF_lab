@@ -5,3 +5,15 @@
 *.obj
 *.pdb
 *.bat
+boost_1_90_0/
+.vs/
+lab4/
+x64/
+*.json
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*user
+*.dll
+*.lib
+
