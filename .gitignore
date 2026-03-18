@@ -16,4 +16,6 @@ x64/
 *user
 *.dll
 *.lib
+lr5/build/
+
 
