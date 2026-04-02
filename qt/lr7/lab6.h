@@ -3,7 +3,8 @@
 #include <QDialog>
 #include <QVector>
 
-#include "param.h"
+#include "lr6param.h"
+#include "lr6calculation.h"
 #include "lab4.h"
 
 #ifdef FFTW_AVAILABLE
@@ -20,19 +21,11 @@ public:
     explicit lab6(QWidget *parent = nullptr);
     ~lab6();
 
+
 private:
     Ui::lab5 *ui;
-    Param *m_param;
-
-    std::vector<std::vector<double>> m_spectrum;
-    std::vector<double> m_sectionX;
-    std::vector<double> m_sectionY;
-
-    // Optimization: Cache FFTW plan and buffers
-    int m_cachedN = -1;
-    fftw_plan m_cachedPlan = nullptr;
-    fftw_complex* m_cachedIn = nullptr;
-    fftw_complex* m_cachedOut = nullptr;
+    Lr6Param *m_param;
+    Lr6Calculation *m_calc;
 
     void readUI();
     void updateUI();
